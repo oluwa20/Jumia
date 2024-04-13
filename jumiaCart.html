@@ -8,7 +8,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200" >
 
     <div class="">
         <!-- --------nav bar-------- -->
@@ -29,10 +29,11 @@
             </div>
 
         </nav>
-          <div class=" sticky top-0 z-50 flex w-[100vw] h-[65px] bg-[whitesmoke] ">
-            <div class="flex pt-3 pl-[200px]">
-                <img class="w-5 h-6 pt-1" src="/asset/menu.png" alt="">
-                <img class="pb-16 w-[190px] h-[100px] pl-[30px]" src="/asset/jumia logo.png" alt="">
+          <div class=" sticky top-0 z-50 flex w-[100vw] h-[65px] bg-[whitesmoke] " >
+            <div class="flex pt-3 pl-[70px]" >
+                <img  class="w-5 h-6 pt-1 hover" src="/asset/menu.png" alt="" id="menu"  >
+                    
+                <img class="pb-16 w-[190px] h-[100px] pl-[40px]" src="/asset/jumia logo.png" alt="">
             </div>
 
             <div class="flex  mt-3 ml-[50px] w-[520px] border h-10 pl-3">
@@ -62,14 +63,14 @@
         </div>
 
         <!-- --------nav bar ends ---------- -->
-       
+        
      <!-- cart starts -->
      
-     <div class="flex justify-between gap-8   pt-[40px] h-[320px] w-[90%] bg-white mt-[20px] rounded-[5px] ml-[60px] " style="overflow: scroll; ">
-        <a href=""><div class=" hover:shadow hover:shadow-gray-300    w-[150px] h-[235px] bg-white  ease-in-out duration-300 hover:scale-110 cursor-pointer mt-4">
+     <div class="flex justify-between gap-8   pt-[40px] h-[320px] w-[90%] bg-white mt-[20px] rounded-[5px] ml-[60px] " style="overflow: scroll;  ">
+        <a href=""><div class=" hover:shadow hover:shadow-gray-300    w-[150px] h-[235px] bg-white  ease-in-out duration-300 hover:scale-110 cursor-pointer mt-4" >
             
             <img src="asset/1(36).jpg" class="w-[150px] h-[150px]  ">
-         <p class="ml-[20px] text-[13px]">itel 200000mAh Mobile Po... <br>&#8358; <b>16,000 </b> <br><del>&#8358;10,500</del></p>
+         <p class="ml-[20px] text-[13px] ">itel 200000mAh Mobile Po... <br>&#8358; <b>16,000 </b> <br><del>&#8358;10,500</del></p>
         </div></a>
 
         <a href=""><div class="hover:shadow hover:shadow-gray-300 w-[150px] h-[235px] ease-in-out duration-300 hover:scale-110 cursor-pointer mt-4">
@@ -217,7 +218,37 @@
                 
                 </div>
             </div>
- 
+            <div style="display: none ; position: absolute;  " id="a" class=" w-[15%] h-[380px] bg-white rounded-[5PX] ml-[50px] shadow mt-[-1000px] pl-[50px] pt-[20px] text-[12px] "  >
+                <a href="Supermarket" ><p class="hover:text-orange-400">Supermarket</p></a>
+                <a href="Health & Beauty"><p class="hover:text-orange-400 mt-[10px]" >Health & Beauty</p></a>
+                <a href="Home & Offices"><p class="hover:text-orange-400 mt-[10px]">Home & Offices</p></a>
+                <a href="Appliances"><p class="hover:text-orange-400 mt-[10px]">Appliances</p></a>
+                <a href="Phones & Tablets"><p class="hover:text-orange-400 mt-[10px]">Phones & Tablets</p></a>
+                <a href="Computings" ><p class="hover:text-orange-400 mt-[10px]">Computings</p></a>
+                <a href="Electronics"><p class="hover:text-orange-400 mt-[10px]">Electronics</p></a>
+                <a href="Fashion"><p class="hover:text-orange-400 mt-[10px]">Fashion</p></a>
+                <a href="Beauty Products"><p class="hover:text-orange-400 mt-[10px]">Beauty Products</p></a>
+                <a href="Gaming"><p class="hover:text-orange-400 mt-[10px]">Gaming</p></a>
+                <a href="Sporting goods"><p class="hover:text-orange-400 mt-[10px]">Sporting goods</p></a>
+                <a href="Other Catergories"><p class="hover:text-orange-400 mt-[10px]">Other Catergories</p></a>
 
+            </div>
+
+            <script>
+                var menu= document.getElementById("menu");
+                menu.addEventListener("mouseover", function(){
+                 document.getElementById("a").style.display = "block";
+                 
+                })
+                var menu= document.getElementById("menu");
+                menu.addEventListener("mouseout", function(){
+                 document.getElementById("a").style.display = "none";
+                })
+               function menu(){
+                document.getElementById("a").style.display = "block";
+               }
+               
+                </script>
+            
 </body>
 </html>
