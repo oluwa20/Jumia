@@ -7,6 +7,58 @@
     <script src="js/tailwind.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", 
+        function() {
+        const slides = document.querySelectorAll(".slide");
+        const prevButton = document.querySelector(".prev");
+        const nextButton = document.querySelector(".next");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          // Hide all slides
+           slides.forEach(slide => {
+             slide.classList.add("hidden");
+           });
+          // Show the slide at the given index
+          slides[index].classList.remove("hidden");
+        }
+
+        function prevSlide() {
+           currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+           showSlide(currentIndex);
+           
+        }
+
+        function nextSlide() {
+           currentIndex = (currentIndex + 1) % slides.length;
+           showSlide(currentIndex);
+        }
+
+        // Event listeners for navigation buttons
+        prevButton.addEventListener("click", prevSlide);
+        nextButton.addEventListener("click", nextSlide);
+
+        // Show the initial slide
+        showSlide(currentIndex);
+       });
+
+    </script>
+
+
+   <style>
+       @keyframes bounce{
+        0%, 40%, 50% {
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+   </style> 
+
+
 </head>
 <body class="">
 
@@ -18,7 +70,7 @@
                 <img class="pl-[200px] w-[90vw] h-[55px]" src="/asset/nav-bar-img.gif" alt="nav-bar-img">
             </div>
 
-            <div class="flex w-[100vw] pt-1 h-[35px] bg-gray-300">
+            <div class="flex w-[100vw] pt-1 h-[35px] bg-gray-100">
                 <a class="flex hover:underline underline-orange-500 ml-[200px]" href="#"><img class="w-4 h-4 mt-1 bg-transparent" src="/asset/logo.png" alt="logo"><p class="ml-1 text-orange-500 font-[500] text-[15px]">Sell on jumia</p></a>
 
                <div class=" flex ml-[400px] pt-3 animate-bounce">
@@ -31,7 +83,7 @@
         </nav>
 
 
-        <div class="sticky top-0 z-50 flex w-[100vw] h-[65px] bg-[whitesmoke]">
+        <div class="sticky top-0 z-50 flex w-[100vw] h-[65px] bg-white">
             <div class="flex pt-3 pl-[200px]">
                 <img class="w-5 h-6 pt-1" src="/asset/menu.png" alt="">
                 <img class="pb-16 w-[190px] h-[100px] pl-[30px]" src="/asset/jumia logo.png" alt="">
@@ -64,6 +116,218 @@
         </div>
 
         <!-- --------nav bar ends ---------- -->
+
+
+        <!-- ----------Landing Pages--------- -->
+
+        <div class="" style="background-image: url(/asset/Desktop_Homepage_Slider__712x384.j); height: 100vh;">
+
+           <div class="flex ml-[200px]">
+                <div class="w-[220px] h-[383px] pt-3 pl-3 mr-4 shadow bg-white mt-6 rounded-md">
+                    <a href="#" class="flex hover:text-orange-500" >
+                        <ion-icon class="w-6 h-6 mr-2" name="nutrition-outline"></ion-icon>
+                        <p class="text-[13px]">Supermarket</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="brush-outline"></ion-icon>
+                        <p class="text-[13px]">Health & Beauty</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="home-outline"></ion-icon>
+                        <p class="text-[13px]">Home & Office</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-2" >
+                        <ion-icon class="w-6 h-6 mr-2" name="tv-outline"></ion-icon>
+                        <p class="text-[13px]">Appliances</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-2" >
+                        <ion-icon class="w-6 h-6 mr-2" name="phone-portrait-outline"></ion-icon>
+                        <p class="text-[13px]">Phone & Tablets</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="desktop-outline"></ion-icon>
+                        <p class="text-[13px]">Computing</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="brush-outline"></ion-icon>
+                        <p class="text-[13px]">Electronics</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="shirt-outline"></ion-icon>
+                        <p class="text-[13px]">Fashion</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="happy-outline"></ion-icon>
+                        <p class="text-[13px]">Baby Products</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="game-controller-outline"></ion-icon>
+                        <p class="text-[13px]">Gaming</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2" name="barbell-outline"></ion-icon>
+                        <p class="text-[13px]">Sporting Goods</p>
+                    </a>
+                    <a href="#" class="flex hover:text-orange-500 mt-1" >
+                        <ion-icon class="w-6 h-6 mr-2 border rounded-[25px] border-black hover:border-orange-500" name="ellipsis-horizontal-circle-outline"></ion-icon>
+                        <p class="text-[13px]">Other Categories</p>
+                    </a>
+                </div>
+
+                <div class="mt-6">
+
+                   <div class="slide ">
+                       <img src="/asset/tech-week.gif" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/Desktop_Homepage_Slider__712x384.jpg" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/tech sale.png" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/incredible tv.png" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/treasure-hunt.gif" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/celebrity style.jpg" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/Hextris.gif" alt="">
+                   </div>
+                   <div class="slide hidden">
+                       <img src="/asset/payment.jpg" alt="">
+                  </div>
+
+                  <button class="prev mt-[-230px] ml-[20px] absolute bg-gray-400 bg-black text-white px-4 py-2 rounded-[20px]">❮</button>
+                  <button class="next absolute ml-[650px] mt-[-230px] bg-gray-400 bg-black text-white px-4 py-2 rounded-[20px]">❯</button>
+
+                </div>
+
+
+                <div class="w-[210px] pl-3 pt-3 h-[200px] shadow bg-white ml-3 mt-6 rounded-md">
+
+                    <div class=" flex">
+                        <ion-icon class="w-[30px] p-1 h-[30px] mt-2 rounded-[50px] text-gray-500 border border-orange-500 border-[2px solid] " name="call"></ion-icon>
+                        <span class="mt-2">
+                            <p class="ml-2 font-[500]">
+                                CALL TO ORDER
+                            </p>
+                            <p class="ml-2 text-[12px]">
+                                0700-600-0000
+                            </p>
+                        </span>
+                    </div>
+                    <div class="">
+                        <a href="#" class="flex">
+                            <img class="w-10 h-10 mt-4 rounded-[50px] text-gray-500 " src="/asset/home-icon.png" alt="">
+
+                            <p class="ml-2 text-2[20px] font-[500] mt-6">
+                                Sell on jumia
+                            </p>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="#" class="flex">
+                            <img class="w-10 h-10 mt-4 rounded-[50px] text-gray-500 " src="/asset/icone-2-return.png" alt="">
+
+                            <p class="ml-2 text-2[20px] font-[500] mt-6">
+                                Best deal
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <img class="mt-[232px] ml-[-210px] w-[210px]" src="/asset/shop_earn.png" alt="shop_earn">
+
+            </div>
+
+            <!-- ----------First Landing page view ends-------- -->
+
+            <div class=" bg-white pt-3 ml-[200px] mr-[145px] mt-3 px-3 ">
+                <div class="flex text-center gap-2">
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/clearance.jpg" alt="clearance">
+                            <p class="mt-4 pb-4 ">Clearance Sale</p>
+                        </div>
+                    </a>
+                    <div class="hover:shadow transition-ease-in hover:scale-105">
+                        <img src="/asset/special-offers.jpg" alt="special-offers">
+                        <p class="mt-4 pb-4">Special Offers</p>
+                    </div>
+                    <div class="hover:shadow transition-ease-in hover:scale-105">
+                        <img src="/asset/phones-tablet.jpg" alt="phones-tablet">
+                        <p class="mt-4 pb-4">Phones & Tablets</p>
+                    </div>
+                    <div class="hover:shadow transition-ease-in hover:scale-105">
+                        <img src="/asset/sneakers.jpg" alt="sneakers">
+                        <p class="mt-4 pb-4">Men's sneakers</p>
+                    </div>
+                    <div class="hover:shadow transition-ease-in hover:scale-105">
+                        <img src="/asset/televisions.jpg" alt="televisions">
+                        <p class="mt-4 pb-4">Televisions</p>
+                    </div>
+                    <div class="hover:shadow transition-ease-in-ease-out hover:scale-105">
+                        <img src="/asset/refrigerator.jpg" alt="refrigerator">
+                        <p class="mt-4 pb-4">Refrigerators</p>
+                    </div>
+
+                </div>
+
+
+                <div class="flex gap-2 mt-3 text-center">
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/Best_deals.png" alt="Best_deals">
+                            <p class="mt-4 pb-4">Best deals</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/generators.jpg" alt="generators">
+                            <p class="mt-4 pb-4">Generators</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/mobile-accessories.jpg" alt="mobile-accessories">
+                            <p class="mt-4 pb-4">Mobile Accessories</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/computing.jpg" alt="computing">
+                            <p class="mt-4 pb-4">Computing Deals</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/groceries.jpg" alt="groceries">
+                            <p class="mt-4 pb-4">Groceries</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hover:shadow transition-ease-in hover:scale-105">
+                            <img src="/asset/Untitled-1.gif" alt="Untitled-1">
+                            <p class="mt-4 pb-4">₦500 Off Every Order</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+ 
+
+
+        </div>
+        
+
+ 
+
+
+
+
 
 
 
